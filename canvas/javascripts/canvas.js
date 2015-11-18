@@ -12,6 +12,7 @@ $(function() {
   }
 
   function createElement(data) {
+    console.log(data);
     var $d = $("<div />", {
       "class": data.shape_type,
       data: data
@@ -24,7 +25,6 @@ $(function() {
   function animateElement() {
     var $e = $(this),
       data = $e.data();
-
     resetElement($e);
     $e.animate({
       left: +data.end_x,
@@ -37,7 +37,7 @@ $(function() {
 
     $e.css({
       left: +data.start_x,
-      right: +data.start_y
+      top: +data.start_y
     });
   }
 
@@ -54,7 +54,7 @@ $(function() {
     $canvas.append(createElement(data));
   });
 
-  $("animate").on("click", function(e) {
+  $("#animate").on("click", function(e) {
     e.preventDefault();
     $canvas.find("div").each(animateElement);
   });
