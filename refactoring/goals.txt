@@ -1,0 +1,7 @@
+Our goal with each of these areas is as follows:
+
+Change the css method call to an addClass and removeClass call instead to keep your CSS out of your JavaScript
+Combine the click events into one since they share functionality, avoiding repeated code
+Remove the conditionals in the accordion click and use toggleClass instead
+Pull your credit card number code out into a function that can be called to obtain the sum of the odd and even digits. Then remove the show and hide conditionals and change the show/hide method calls to toggle calls instead.
+Remove the switch statement and replace it with a logic-less means of setting the text. Eliminate all but one of the text method calls in your code. As a hint, think about how this could be rewritten to use object properties.
